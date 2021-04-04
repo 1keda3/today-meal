@@ -1,0 +1,15 @@
+<div class='tweet-new'>
+  <%= form_with model: @tweet, url: tweets_path, local: true do |f| %>
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_area :title, placeholder:"タイトル" %>
+    <%= f.label :eat_time, "食事した時間" %>
+    <%= f.text_area :eat_time, placeholder:"食事した時間"%>
+    <%= f.label :time_taken, "料理時間" %>
+    <%= f.text_area :time_taken, placeholder:"料理時間" %>
+    <%= f.label :recipe, "レシピ" %>
+    <%= f.text_area :recipe, placeholder:"レシピ" %>
+    <%= f.label :supplement, "その他" %>
+    <%= f.text_area :supplement, placeholder:"何か記入したいことがあれば" %>
+    <%= f.submit "作成"%>
+  <% end %>
+</div>
