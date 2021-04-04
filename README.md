@@ -18,13 +18,13 @@
 
 ## tweetsテーブル
 
-| Column     | Type       | Options     |
-| ---------- | ---------- | ----------- |
-| title      | string     | null: false |
-| eat_time   | string     |
-| time_taken | string     |
-| recipe     | text       |
-| supplement | text       |
+| Column     | Type       | Options           |
+| ---------- | ---------- | ----------------- |
+| title      | string     | null: false       |
+| eat_time   | string     |                   |
+| time_taken | string     |                   |
+| recipe     | text       |                   |
+| supplement | text       |                   |
 | user_id    | references | foreign_key: true |
 
 
