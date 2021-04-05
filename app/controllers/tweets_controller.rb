@@ -3,18 +3,17 @@ class TweetsController < ApplicationController
     @tweets = Tweet.all
   end
 
-  def new
-    @tweet = Tweet.new
-  end
-
   def create
-    Tweet.create(tweet_params)
+    @tweet = Tweet.create(tweet_params)
+    if @tweet.save
+      redirect_to root_path
+    end
   end
 
   private
 
   def tweet_params
-    params.require(:tweet).permit(:title, :eat_time, :time_taken, :recipe, :supplement)
+    params.permit(:title, :eat_time, :time_taken, :recipe, :supplement, :image)
   end
   
 end

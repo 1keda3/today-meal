@@ -3,5 +3,23 @@
 
   <div class='main-page'>
     <%= "メイン" %>
+    <div class="main-content">
+      <ul class='main-lists'>
+        <% @tweets.each do |tweet| %>
+          <li class='main-list'>
+            <%= "タイトル" %><br />
+            <%= tweet.title %><br />
+            <%= "食事した時間" %><br />
+            <%= tweet.eat_time %><br />
+            <%= "調理時間" %><br />
+            <%= tweet.time_taken %><br />
+            <%= "レシピ" %><br />
+            <%= tweet.recipe %><br />
+            <%= "その他" %><br />
+            <%= tweet.supplement %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>

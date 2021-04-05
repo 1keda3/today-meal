@@ -22,7 +22,14 @@ ul,li {
 }
 
 .left-header {
-  font-size: 16px;
+  font-size: 25px;
+  margin-top: 15px;
+  margin-left: 10px;
+  display: flex;
+}
+
+.header-top {
+  margin-right: 15px;
 }
 
 .right-header {
@@ -30,6 +37,17 @@ ul,li {
 }
 
 .main-page {
-  background-color: #FFFF99;
+  background-color: #FFCCFF;
   height: calc(100vh - 10vh);
+  overflow: scroll;
+}
+
+.main-list {
+  border: 1px solid red;
+  margin-bottom: 15px;
+}
+
+.tweet-new {
+  background-color: #FFCCCC;
+  height: 100vh;
 }
