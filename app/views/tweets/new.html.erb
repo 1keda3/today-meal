@@ -1,0 +1,28 @@
+<div class='tweet-new-page'>
+
+  <%= render 'header'%>
+
+  <%= form_with model: @tweet, url: tweets_path, class: 'new-tweet', local: true do |f| %>
+    <%= f.label :title, "タイトル(必須)" %><br />
+    <%= f.text_area :title, placeholder:"20文字以内" %><br />
+
+    <%= f.label :eat_time, "食事した時間" %><br />
+    <%= f.text_area :eat_time, placeholder:"例)朝、○月○日、12:00等"%><br />
+    
+    <%= f.label :time_taken, "料理時間" %><br />
+    <%= f.text_area :time_taken %><br />
+    
+    <%= f.label :recipe, "レシピ" %><br />
+    <%= f.text_area :recipe %><br />
+    
+    <%= f.label :supplement, "その他" %><br />
+    <%= f.text_area :supplement %><br />
+   
+    <label class="form-image">
+      <span class="image-file">画像</span><br />
+      <%= f.file_field :image, class: 'hidden' %></p>
+    </label>
+
+    <%= f.submit "作成"%>
+  <% end %>
+</div>
