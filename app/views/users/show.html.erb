@@ -1,0 +1,29 @@
+ <%= render'tweets/header'%>
+<div class="user-page">
+  <div class="user-content">
+    <div class="inner">
+      <div class="user__wrapper">
+        <div class="user-information">
+          <h2 class="page-heading">
+            <%= "#{@user.nickname}さんの情報"%>
+          </h2>
+          <% if user_signed_in? && current_user.id == @user.id%>
+            <%= link_to '編集', edit_user_registration_path, class:"user-edit-link" %>
+          <% end %>
+        </div>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th class="table__col1">名前</th>
+              <td class="table__col2"><%= @user.nickname %></td>
+            </tr>
+            <tr>
+              <th class="table__col1">プロフィール</th>
+              <td class="table__col2"><%= @user.profile %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
