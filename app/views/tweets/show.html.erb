@@ -1,0 +1,29 @@
+<div class="show-tweet">
+  <%= render 'header'%>
+  <%= "詳細ページ" %><br />
+  
+  <%= "#タイトル" %><br />
+  <%= @tweet.title %><br />
+
+  <%= "#食事した時間" %><br />
+  <% if @tweet.eat_time.present? %>
+    <%= @tweet.eat_time %><br />
+  <% end %>
+  
+  <%= "#調理時間" %><br />
+  <% if @tweet.time_taken.present? %>
+    <%= @tweet.time_taken %><br />
+  <% end %>
+
+  <%= "#レシピ" %><br />
+  <% if @tweet.recipe.present? %>
+    <%= @tweet.recipe %><br />
+  <% end %>
+  
+  <%= "#その他" %><br />
+  <% if @tweet.supplement.present? %>
+    <%= @tweet.supplement %><br />
+  <% end %>
+
+  <%= image_tag @tweet.image.variant(resize: '500x500'), class: 'message-image' if @tweet.image.attached? %>
+</div>

@@ -42,12 +42,44 @@ ul,li {
   overflow: scroll;
 }
 
-.main-list {
-  border: 1px solid red;
-  margin-bottom: 15px;
+.main-lists {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
 }
 
-.tweet-new {
+.main-list {
+  width: 300px;
+  height: 250px;
+  border: 1px solid red;
+  margin: 15px 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.index-eat_time {
+  margin-bottom: 5px;
+}
+
+.no-image {
+  width: 250px;
+  height: 180px;
+}
+
+.tweet-new-page {
   background-color: #FFCCCC;
+  height: 100vh;
+}
+
+.new-tweet {
+  text-align: center;
+}
+
+.hidden {
+}
+
+.show-tweet {
+  background-color: beige;
   height: 100vh;
 }

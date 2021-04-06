@@ -2,21 +2,34 @@
   <%= render 'header'%>
 
   <div class='main-page'>
-    <%= "メイン" %>
     <div class="main-content">
       <ul class='main-lists'>
         <% @tweets.each do |tweet| %>
           <li class='main-list'>
-            <%= "タイトル" %><br />
-            <%= tweet.title %><br />
-            <%= "食事した時間" %><br />
-            <%= tweet.eat_time %><br />
-            <%= "調理時間" %><br />
-            <%= tweet.time_taken %><br />
-            <%= "レシピ" %><br />
-            <%= tweet.recipe %><br />
-            <%= "その他" %><br />
-            <%= tweet.supplement %>
+            <%= link_to tweet_path(tweet.id), method: :get do %>
+
+              <div class='index-title'>
+                <%= tweet.title %><br />
+              </div>
+
+              <div class='index-eat_time'>
+                <% if tweet.eat_time.present? %>
+                  <%= tweet.eat_time %><br />
+                <% else %>
+                  </p>
+                <% end %>
+              </div>
+              
+              <div class='index-image'>
+                <% if tweet.image.attached? %>
+                  <%= image_tag tweet.image.variant(resize: '250x250'), class: 'no-image' %>
+                <% else %>
+                  <%= image_tag "no_image.jpeg", class:"no-image" %>
+                <% end %><br />
+              </div>
+              
+            <% end %>
+            <%= "ユーザー名" %>
           </li>
         <% end %>
       </ul>
