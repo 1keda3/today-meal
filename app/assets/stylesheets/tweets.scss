@@ -78,5 +78,6 @@ ul,li {
 
 .show-tweet {
   background-color: beige;
-  height: 100vh;
+  height: calc(100vh - 10vh);
+  text-align: center;
 }

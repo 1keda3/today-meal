@@ -1,4 +1,4 @@
- <%= render'tweets/header'%>
+<%= render'tweets/header'%>
 <div class="user-page">
   <div class="user-content">
     <div class="inner">
@@ -25,5 +25,9 @@
         </table>
       </div>
     </div>
+  </div>
+  </p><%= "投稿物"%>
+  <div class='user-tweets'>
+    <%= render partial: 'tweets/tweet', collection: @user.tweets %>
   </div>
 </div>
