@@ -6,6 +6,7 @@ class CreateTweets < ActiveRecord::Migration[6.0]
       t.string     :time_taken
       t.text       :recipe
       t.text       :supplement
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

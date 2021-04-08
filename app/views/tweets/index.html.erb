@@ -29,7 +29,7 @@
               </div>
               
             <% end %>
-            <%= "ユーザー名" %>
+            <%= link_to tweet.user.nickname, user_path(tweet.user.id) %>
           </li>
         <% end %>
       </ul>

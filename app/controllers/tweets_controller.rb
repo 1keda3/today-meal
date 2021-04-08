@@ -17,7 +17,7 @@ class TweetsController < ApplicationController
   private
 
   def tweet_params
-    params.permit(:title, :eat_time, :time_taken, :recipe, :supplement, :image)
+    params.permit(:title, :eat_time, :time_taken, :recipe, :supplement, :image).merge(user_id: current_user.id)
   end
   
 end
