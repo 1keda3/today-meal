@@ -1,4 +1,7 @@
 class TweetsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
+  before_action :tweet_redirect, only: [:edit, :update, :destroy]
+
   def index
     @tweets = Tweet.all.order('created_at DESC')
   end
@@ -17,7 +20,6 @@ class TweetsController < ApplicationController
   end
 
   def edit
-    @tweet = Tweet.find(params[:id])
   end
 
   def update
@@ -44,6 +46,11 @@ class TweetsController < ApplicationController
 
   def update_params
     params.require(:tweet).permit(:title, :eat_time, :time_taken, :recipe, :supplement, :image).merge(user_id: current_user.id)
+  end
+
+  def tweet_redirect
+    @tweet = Tweet.find(params[:id])
+    redirect_to root_path unless current_user.id == @tweet.user_id
   end
 
 end
