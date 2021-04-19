@@ -2,37 +2,6 @@
   <%= render 'header'%>
 
   <div class='main-page'>
-    <div class="main-content">
-      <ul class='main-lists'>
-        <% @tweets.each do |tweet| %>
-          <li class='main-list'>
-            <%= link_to tweet_path(tweet.id), method: :get do %>
-
-              <div class='index-title'>
-                <%= tweet.title %><br />
-              </div>
-
-              <div class='index-eat_time'>
-                <% if tweet.eat_time.present? %>
-                  <%= tweet.eat_time %><br />
-                <% else %>
-                  </p>
-                <% end %>
-              </div>
-              
-              <div class='index-image'>
-                <% if tweet.image.attached? %>
-                  <%= image_tag tweet.image.variant(resize: '250x250'), class: 'no-image' %>
-                <% else %>
-                  <%= image_tag "no_image.jpeg", class:"no-image" %>
-                <% end %><br />
-              </div>
-              
-            <% end %>
-            <%= link_to tweet.user.nickname, user_path(tweet.user.id) %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+    <%= render 'tweets'%>
   </div>
 </div>
