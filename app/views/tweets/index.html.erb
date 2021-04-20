@@ -2,6 +2,8 @@
   <%= render 'header'%>
 
   <div class='main-page'>
-    <%= render 'tweets'%>
+    <% if @tweets.present? %>
+      <%= render 'tweets'%>
+    <% end %>
   </div>
 </div>
