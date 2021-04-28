@@ -3,7 +3,7 @@
   <%= render 'header'%>
 
   <%= form_with model: @tweet, url: tweets_path, class: 'new-tweet', local: true do |f| %>
-    <%= f.label :title, "タイトル(必須)" %><br />
+    <%= f.label :title, "タイトル(入力必須 20文字以下)" %><br />
     <%= f.text_area :title, placeholder:"20文字以内" %><br />
 
     <%= f.label :eat_time, "食事した時間" %><br />
