@@ -112,4 +112,6 @@ today-meal
 フォーム下部のコメント一覽の欄に表示される。
 ![8a783114fb20cb2b82b1dd7f74ba0ff5](https://user-images.githubusercontent.com/78196968/116191829-ed525c80-a767-11eb-8c93-53d64fca37c9.gif)
 
+# データベース設計
+<img width="521" alt="today-mail ER図" src="https://user-images.githubusercontent.com/78196968/116890046-31fa5e00-ac68-11eb-9ff6-9b3d3902a248.png">
 
